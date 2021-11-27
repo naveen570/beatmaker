@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Comforter Brush", cursive;
+  font-family: "Caveat", cursive;
 }
 i,
 svg {
@@ -34,7 +34,7 @@ svg {
   align-items: center;
   width: 85%;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .controls {
   display: flex;
@@ -58,22 +58,45 @@ svg {
 .pad {
   width: 5rem;
   height: 5rem;
-  margin: 1rem;
+  margin: 0 1rem;
   cursor: pointer;
 }
 .kick-pad {
-  background-color: rgb(139, 204, 247);
+  background-color: rgb(173, 219, 250);
 }
 .snare-pad {
-  background-color: rgb(154, 82, 196);
+  background-color: rgb(202, 153, 229);
 }
 .hihat-pad {
-  background-color: rgb(250, 220, 123);
+  background-color: rgb(253, 233, 168);
+}
+.kick-pad.active,
+.kick-pad:hover {
+  background-color: rgb(77, 177, 243);
+}
+.snare-pad.active,
+.snare-pad:hover {
+  background-color: rgb(150, 67, 199);
+}
+.hihat-pad.active,
+.hihat-pad:hover {
+  background-color: rgb(236, 199, 75);
 }
 .play {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: bolder;
   border: none;
   padding: 1rem 2rem;
   background-color: rgb(247, 65, 110);
   color: white;
   cursor: pointer;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
