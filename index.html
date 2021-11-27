@@ -19,13 +19,16 @@
         <div class="kick-track">
           <div class="controls">
             <h2>Kick</h2>
-            <button class="mute kick-volume">
+            <button data-track="1" class="mute kick-volume">
               <i class="fas fa-volume-mute"></i>
             </button>
             <select name="kick-select" id="kick-select">
               <option value="./soundEffects/kick-808.wav">Kick 808</option>
               <option value="./soundEffects/kick-heavy.wav">Kick Heavy</option>
               <option value="./soundEffects/kick-softy.wav">Kick Softy</option>
+              <option value="./soundEffects/kick-classic.wav">
+                Kick Classic
+              </option>
             </select>
           </div>
           <div class="pads kick-pads">
@@ -42,7 +45,7 @@
         <div class="snare-track">
           <div class="controls">
             <h2>Snare</h2>
-            <button class="mute snare-volume">
+            <button data-track="2" class="mute snare-volume">
               <i class="fas fa-volume-mute"></i>
             </button>
             <select name="snare-select" id="snare-select">
@@ -69,7 +72,7 @@
         <div class="hihat-track">
           <div class="controls">
             <h2>Hihat</h2>
-            <button class="mute hihat-volume">
+            <button data-track="3" class="mute hihat-volume">
               <i class="fas fa-volume-mute"></i>
             </button>
             <select name="hihat-select" id="hihat-select">
@@ -91,10 +94,20 @@
           </div>
         </div>
         <button class="play">Play</button>
+        <div class="tempo">
+          <input
+            type="range"
+            min="20"
+            max="400"
+            value="150"
+            class="tempo-slider"
+          />
+          <p class="tempo-text">Tempo:<span class="tempo-nr">150</span></p>
+        </div>
       </section>
-      <audio src="./SoundEffects/kick-classic.wav" class="kick"></audio>
-      <audio src="./soundEffects/snare-acoustic01.wav" class="snare"></audio>
-      <audio src="./soundEffects/hihat-acoustic01.wav" class="hihat"></audio>
+      <audio src="./SoundEffects/kick-808.wav" class="kick"></audio>
+      <audio src="./soundEffects/snare-808.wav" class="snare"></audio>
+      <audio src="./soundEffects/hihat-808.wav" class="hihat"></audio>
     </main>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
